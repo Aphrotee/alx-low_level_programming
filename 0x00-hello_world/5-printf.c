@@ -4,10 +4,10 @@
  * main - entry point
  *
  * the string is printed with the printf function
- * Rrturn: (0) Success
+ * Return: (0) Success
  */
 int main(void)
 {
-	printf("With proper grammar, but the outcome is a piece of art");
+	printf("With proper grammar, but the outcome is a piece of art,\n");
 	return (0);
 }
