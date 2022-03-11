@@ -19,10 +19,10 @@ int main(void)
 	int i;
 	int f;
 
-	c=sizeof(char);
-	i=sizeof(int);
-	li=sizeof(long int);
-	lli=sizeof(long long int);
+	c = sizeof(char);
+	i = sizeof(int);
+	li = sizeof(long int);
+	lli = sizeof(long long int);
 	f = sizeof(float);
 	printf("Size of a char: %d byte(s)\n", c);
 	printf("Size of an int: %d byte(s)\n", i);
