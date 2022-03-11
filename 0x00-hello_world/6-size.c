@@ -2,32 +2,32 @@
 
 /**
  * main- entry point
- * @sizechar: is the size of char type
- * @sizeint: is the size of int type
- * @sizelongint: is the size of long it type
- * @sizelonglongint: is the size of long long int type
- * @sizefloat is the size of float type
+ * @c: is the size of char type
+ * @i: is the size of int type
+ * @li: is the size of long it type
+ * @lli: is the size of long long int type
+ * @f: is the size of float type
  *
  * the printf functions for each types prints the sizes
  * Return: (0) Success
  */
 int main(void)
 {
-	int sizechar;
-	int sizelongint;
-	int sizelonglongint;
-	int sizefloat;
-	int sizeint;
+	int c;
+	int li;
+	int lli;
+	int i;
+	int f;
 
-	sizechar=sizeof(char);
-	sizeint=sizeof(int);
-	sizelongint=sizeof(long int);
-	sizelonglongint=sizeof(long long int);
-	sizefloat=sizeof(float);
-	printf("Size of a char: %d byte(s)\n", sizechar);
-	printf("Size of an int: %d byte(s)\n", sizeint);
-	printf("Size of a long int: %d byte(s)\n", sizelongint);
-	printf("Size of a long long int: %d byte(s)\n", sizelonglongint);
-	printf("Size of a float: %d byte(s)\n", sizefloat);
+	c=sizeof(char);
+	i=sizeof(int);
+	li=sizeof(long int);
+	lli=sizeof(long long int);
+	f = sizeof(float);
+	printf("Size of a char: %d byte(s)\n", c);
+	printf("Size of an int: %d byte(s)\n", i);
+	printf("Size of a long int: %d byte(s)\n", li);
+	printf("Size of a long long int: %d byte(s)\n", lli);
+	printf("Size of a float: %d byte(s)\n", f);
 	return (0);
 }
