@@ -2,10 +2,10 @@
 
 /**
  * main- entry point
- * @c: size of char
- * @i: size of int
- * @li: size of long int
- * @lli: size of long long int
+ * @c: size char
+ * @i: size int
+ * @li: size long int
+ * @lli: size 2long int
  * @f: size flt
  *
  * the printf functions for each types prints the sizes
