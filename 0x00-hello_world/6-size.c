@@ -2,11 +2,11 @@
 
 /**
  * main- entry point
- * @c: is the size of char type
- * @i: is the size of int type
- * @li: is the size of long it type
- * @lli: is the size of long long int type
- * @f: is the size of float type
+ * @c: size of char
+ * @i: size of int
+ * @li: size of long int
+ * @lli: size of long long int
+ * @f: size flt
  *
  * the printf functions for each types prints the sizes
  * Return: (0) Success
