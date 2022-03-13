@@ -15,4 +15,5 @@ int main(void)
 		putchar(alph);
 		alph++;
 	}
+	return (0);
 }
