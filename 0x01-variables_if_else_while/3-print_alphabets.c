@@ -21,7 +21,7 @@ int main(void)
 	{
 		putchar(Alph);
 		Alph++;
-  } 
+	}
 	putchar('\n');
 	return (0);
 }
