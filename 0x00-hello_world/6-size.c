@@ -2,11 +2,6 @@
 
 /**
  * main- entry point
- * @c: size
- * @i: size
- * @li: size
- * @lli: size
- * @f: size
  *
  * the printf functions for each types prints the sizes
  * Return: (0) Success
