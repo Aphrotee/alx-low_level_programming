@@ -8,7 +8,7 @@
 int main(void)
 {
 	char alph;
-  char Alph;
+	char Alph;
 
 	alph = 'a';
 	while (alph <= 'z')
@@ -16,7 +16,7 @@ int main(void)
 		putchar(alph);
 		alph++;
 	}
-  Alph = 'A';
+ 	Alph = 'A';
 	while (Alph <= 'Z')
 	{
 		putchar(Alph);
