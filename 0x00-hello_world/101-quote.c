@@ -1,15 +1,13 @@
 #include <stdio.h>
-
+#include <unistd.h>
 /**
  * main - entry point
- * @write: string
  *
  * the string in the writevariable is printed
- * Return: (1)
+ * Return: Always 1
  */
-int write(int filedes, const char *buf, unsingned int nbyte);
-int main(int argc, char** argv)
+int main(void)
 {
-	write(1, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 13);
-	return 1;
+	write(2, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 59);
+	return (1);
 }
