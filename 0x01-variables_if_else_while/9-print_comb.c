@@ -7,18 +7,18 @@
  */
 int main(void)
 {
-	char num;
-	char com;
+	int num;
 
-	com = ',';
-	num = '0';
-	while (num < '9')
+	num = 0;
+	while (num <= 9)
 	{
-		putchar(num);
-		putchar(com);
-		putchar(' ');
+		putchar(num + '0');
+		if (num != 9)
+		{
+			putchar(',');
+			putchar(' ');
+		}
 		num++;
 	}
-	putchar('9');
 	return (0);
 }
