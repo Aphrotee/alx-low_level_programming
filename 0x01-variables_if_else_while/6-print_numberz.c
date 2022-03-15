@@ -8,13 +8,15 @@
 int main(void)
 {
 	int num;
+	char x = 56;
 
 	num = 0;
-	while (num < 9)
+	while (num <= 9)
 	{
-		putchar('num');
+		putchar(num);
 		num++;
 	}
+	write(1, &x, 1);
 	putchar('\n');
 	return (0);
 }
