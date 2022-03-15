@@ -7,16 +7,10 @@
  */
 int main(void)
 {
-	int num;
-	char x = 56;
+	char ch = '0';
 
-	num = 0;
-	while (num <= 9)
-	{
-		putchar(num);
-		num++;
-	}
-	write(1, &x, 1);
+	for (ch = '0'; ch <= '9'; ch++)
+		putchar(ch);
 	putchar('\n');
 	return (0);
 }
