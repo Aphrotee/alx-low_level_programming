@@ -10,6 +10,21 @@ int print_last_digit(int k)
 {
 	int i;
 
-	i = k % 10;
+	if (k > 0)
+	{
+		i = k % 10;
+		_putchar(i);
+	}
+	else if (k < 0)
+	{
+		k *= -1;
+		i = k % 10;
+		_putchar(i);
+	}
+	else
+	{
+		i = k;
+		_putchar(i)
+	}
 	return (i);
 }
