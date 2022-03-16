@@ -1,16 +1,10 @@
 #include "main.h"
 
 /**
- * main - entry point
+ * print_alphabet - print a-z
  *
- * Return: 0 Success
+ * Return: void
  */
-int main(void)
-{
-	print_alphabet();
-	return (0);
-}
-
 void print_alphabet(void)
 {
 	char alph;
