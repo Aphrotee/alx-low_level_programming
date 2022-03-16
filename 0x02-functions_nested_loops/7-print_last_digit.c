@@ -24,7 +24,7 @@ int print_last_digit(int k)
 	else
 	{
 		i = k;
-		_putchar(i)
+		_putchar(i);
 	}
 	return (i);
 }
