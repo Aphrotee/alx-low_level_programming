@@ -10,7 +10,7 @@ int _isupper(int c)
 {
 	int i;
 
-	if ((c >= '0') && (c <= '9'))
+	if ((c >= 'A') && (c <= 'Z'))
 		i = 1;
 	else
 		i = 0;
