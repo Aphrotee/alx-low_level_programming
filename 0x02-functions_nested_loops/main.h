@@ -9,3 +9,4 @@ int _abs(int k);
 int print_last_digit(int k);
 void jack_bauer(void);
 void times_table(void);
+int add(int a, int b);
