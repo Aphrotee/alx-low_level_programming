@@ -7,9 +7,15 @@
  */
 int main(void)
 {
-    print_triangle(0);
-    print_triangle(2);
-    print_triangle(10);
-    print_triangle(-4);
+    print_number(98);
+    _putchar('\n');
+    print_number(402);
+    _putchar('\n');
+    print_number(1024);
+    _putchar('\n');
+    print_number(0);
+    _putchar('\n');
+    print_number(-98);
+    _putchar('\n');
     return (0);
 }
