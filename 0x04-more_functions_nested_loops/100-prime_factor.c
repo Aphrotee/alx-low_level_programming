@@ -7,7 +7,7 @@
  */
 int main()
 {
-	long long int i, j, k, n = 612852475143;
+	long int i, j, k, n = 612852475143;
 
 	i = 2;
 	while(i < n)
@@ -29,6 +29,6 @@ int main()
 		}
 		i++;
 	}
-	printf("%lld\n", k);
+	printf("%d\n", k);
 	return (0);
 }
