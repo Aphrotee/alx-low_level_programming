@@ -18,8 +18,10 @@ int main(void)
 		b = c;
 		c = d;
 		if (d < 4000000)
+		{
 			if (d % 2 == 0)
 				e += d;
+		}
 		else
 			break;
 	}
