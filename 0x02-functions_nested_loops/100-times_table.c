@@ -9,15 +9,19 @@ void print_times_table(int n)
 {
 	int i, j, k;
 
-	for (i = 0; i <= 9; i++)
+	if ((n >= 0) && (n <= 15))
 	{
-		for (j = 0; j <= n; j++)
+		for (i = 0; i <= 9; i++)
 		{
-			k = i * j;
-			_putchar(k + '0');
-			_putchar(',');
-			_putchar(' ');
+			for (j = 0; j <= n; j++)
+			{
+				k = i * j;
+				_putchar(k + '0');
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
+			}
+			_putchar('\n');
 		}
-		_putchar('\n');
 	}
 }
