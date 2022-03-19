@@ -11,13 +11,13 @@ int main(void)
 
 	b = 1;
 	c = 2;
-	printf("%ld, %ld, ", b, c);
+	printf("%ld, %ld", b, c);
 	for (a = 0; a < 48; a++)
 	{
 		d = b + c;
 		b = c;
 		c = d;
-		printf("%ld, ", d);
+		printf(", %ld", d);
 	}
 	printf("\n");
 	return (0);
