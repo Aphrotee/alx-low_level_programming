@@ -25,6 +25,7 @@ int main(void)
 		else
 			break;
 	}
+	e += 2;
 	printf("%ld\n", e);
 	return (0);
 }
