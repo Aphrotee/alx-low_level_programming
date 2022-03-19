@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * print_times_table - prints times table up to n times
- * @n: times table to print
+ * print_number - prints number up to n times
+ * @n: integer to print
  * Return: void
  */
 void print_number(int n)
@@ -31,6 +31,11 @@ void print_number(int n)
 		_putchar('0');
 }
 
+/**
+ * print_times_table - prints times table up to n times
+ * @n: times table to print
+ * Return: void
+ */
 void print_times_table(int n)
 {
 	int i, j, k;
@@ -55,7 +60,7 @@ void print_times_table(int n)
 					_putchar(',');
 					_putchar(' ');
 					print_number(k);
-				}	
+				}
 				else
 				{
 					_putchar(',');
