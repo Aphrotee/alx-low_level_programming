@@ -39,29 +39,30 @@ void print_times_table(int n)
 	{
 		for (i = 0; i <= n; i++)
 		{
-			for (j = 0; j <= n; j++)
+			_putchar('0');
+			for (j = 1; j <= n; j++)
 			{
 				k = i * j;
 				if ((k > 9) && (k < 100))
 				{
-					print_number(k);
 					_putchar(',');
 					_putchar(' ');
 					_putchar(' ');
+					print_number(k);
 				}
 				else if (k >= 100)
 				{
-					print_number(k);
 					_putchar(',');
 					_putchar(' ');
+					print_number(k);
 				}	
 				else
 				{
-					_putchar(k + '0');
 					_putchar(',');
 					_putchar(' ');
 					_putchar(' ');
 					_putchar(' ');
+					_putchar(k + '0');
 				}
 			}
 			_putchar('\n');
