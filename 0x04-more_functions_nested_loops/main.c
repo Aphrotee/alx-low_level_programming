@@ -1,21 +1,18 @@
 #include "main.h"
 
 /**
- * main - check the code
+ * main - check the code.
  *
  * Return: Always 0.
  */
 int main(void)
 {
-    print_number(98);
+    print_times_table(3);
     _putchar('\n');
-    print_number(402);
+    print_times_table(5);
     _putchar('\n');
-    print_number(1024);
+    print_times_table(98);
     _putchar('\n');
-    print_number(0);
-    _putchar('\n');
-    print_number(-98);
-    _putchar('\n');
+    print_times_table(12);  
     return (0);
 }
