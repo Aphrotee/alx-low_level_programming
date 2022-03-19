@@ -7,18 +7,21 @@
  */
 int main(void)
 {
-	 long a, b, c, d;
+	 long a, b, c, d, e;
 
 	b = 1;
+	e = 0;
 	c = 2;
-	printf("%ld, %ld, ", b, c);
 	for (a = 0; a < 48; a++)
 	{
 		d = b + c;
 		b = c;
 		c = d;
-		printf("%ld, ", d);
+		if (d < 4000000)
+			e += d;
+		else
+			break;
 	}
-	printf("\n");
+	printf("%ld\n", e);
 	return (0);
 }
