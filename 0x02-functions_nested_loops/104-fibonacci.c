@@ -17,8 +17,6 @@ int main(void)
 		d = b + c;
 		b = c;
 		c = d;
-		if (d < 0)
-			d *= -1;
 		printf(", %lu", d);
 	}
 	printf("\n");
