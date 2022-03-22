@@ -31,6 +31,6 @@ void print_rev(char *s)
 				break;
 			s--;
 		}
-		_putchar('\n');
 	}
+	_putchar('\n');
 }
