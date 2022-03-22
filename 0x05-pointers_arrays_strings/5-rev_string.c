@@ -9,10 +9,10 @@
 void rev_string(char *s)
 {
 	char a = *s;
-	int i, j, k;
+	int i, j, k, l, m;
+	char *r, b;
 
-	
-	for (k = 0; k < 1; k++)
+	for (m = 0; m < 1; m++)
 	{
 		if (*s == '\0')
 			break;
@@ -24,13 +24,32 @@ void rev_string(char *s)
 			s++;
 		}
 		s--;
+		b = *s;
 		j = 0;
 		while (j < 1)
 		{
-			_putchar(*s);
+			*r = *s;
+			
 			if (*s == a)
 				break;
+			r++;
 			s--;
+		}
+		k = 0;
+		while (k < 1)
+		{
+			if (*r == b)
+				break;
+			r--;
+		}
+		l = 0;
+		while (l < 1)
+		{
+			if (*r == '\0')
+				break;
+			*s = *r;
+			r++;
+			s++;
 		}
 	}
 }
