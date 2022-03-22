@@ -9,27 +9,29 @@
 void print_rev(char *s)
 {
 	char a = *s;
-	int i, j;
+	int i, j, k;
 
-	i = 0;
-	while (i < 1)
+	
+	for (k = 0; k < 1; k++)
 	{
 		if (*s == '\0')
 			break;
-		s++;
-	}
-	s--;
-
-	j = 0;
-	while (j < 1)
-	{
-		_putchar(*s);
-		if (*s == a)
-			break;
+		i = 0;
+		while (i < 1)
+		{
+			if (*s == '\0')
+				break;
+			s++;
+		}
 		s--;
+		j = 0;
+		while (j < 1)
+		{
+			_putchar(*s);
+			if (*s == a)
+				break;
+			s--;
+		}
 	}
-	if ((*s == ' ') && (*(s + 1) == '\0'))
-		continue;
-	else
-		_putchar('\n');
+	_putchar('\n');
 }
