@@ -27,7 +27,9 @@ void print_rev(char *s)
 		if (*s == a)
 			break;
 		s--;
-	}
-	if !((*s == ' ') && (*(s + 1) == '\0'))
+	}	
+	if ((*s == ' ') && (*(s + 1) == '\0'))
+		continue;
+	else
 		_putchar('\n');
 }
