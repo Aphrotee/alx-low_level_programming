@@ -9,7 +9,7 @@
 void print_rev(char *s)
 {
 	char a = *s;
-	int i, j;
+	int i, j, k;
 
 	i = 0;
 	while (i < 1)
@@ -27,9 +27,11 @@ void print_rev(char *s)
 		if (*s == a)
 			break;
 		s--;
-	}	
+	}
+	for (k = 0; k < 1; k++)
+	{
 	if ((*s == ' ') && (*(s + 1) == '\0'))
-		continue;
-	else
-		_putchar('\n');
+		break;
+	_putchar('\n');
+	}
 }
