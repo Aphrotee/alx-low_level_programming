@@ -28,5 +28,6 @@ void print_rev(char *s)
 			break;
 		s--;
 	}
-	_putchar('\n');
+	if !((*s == ' ') && (*(s + 1) == '\0'))
+		_putchar('\n');
 }
