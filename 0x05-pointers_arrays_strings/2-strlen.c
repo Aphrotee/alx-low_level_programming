@@ -14,7 +14,7 @@ int _strlen(char *s)
 	j = 0;
 	while (i < 2)
 	{
-		if (*s = \0)
+		if (*s == \0)
 		{
 			k = j;
 			break;
