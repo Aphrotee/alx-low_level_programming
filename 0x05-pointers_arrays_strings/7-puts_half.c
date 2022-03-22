@@ -1,6 +1,30 @@
 #include "main.h"
 
 /**
+ * _strlen - returns string length
+ * @s: string to count its length
+ *
+ * Return: string length
+ */
+int _strlen(char *s)
+{
+	int i, j, k;
+
+	i = 0;
+	j = 0;
+	while (i < 2)
+	{
+		if (*s == '\0')
+		{
+			k = j;
+			break;
+		}
+		s++;
+		j++;
+	}
+	return (k);
+}
+/**
  * puts_half - prints second half of string
  * @str: string to print
  *
