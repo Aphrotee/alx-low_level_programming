@@ -5,13 +5,13 @@
  * @str: string to be appended
  * @dest: string to be updated
  * @n: bytes of str to be appended
- * 
+ *
  * Return: pointer to dest
  */
 char *_strncat(char *dest, char *src, int n)
 {
 	char *d = dest;
-	int  i;
+	int i;
 
 	if (*src != '\0')
 	{
