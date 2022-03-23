@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * print_array - prints an array
@@ -9,7 +10,7 @@
  */
 void print_array(int *a, int n)
 {
-	int i, j, k;
+	int i;
 
 	for (i = 0; i < n - 1; i++)
 	{
