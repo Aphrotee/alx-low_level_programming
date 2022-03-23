@@ -20,10 +20,10 @@ char *_strcpy(char *dest, char *src)
 		b = 0;
 		while (b < 1)
 		{
-			*dest = *src;
-			src++;
 			if (*src == '\0')
 				break;
+			*dest = *src;
+			src++;
 			dest++;
 		}
 	}
