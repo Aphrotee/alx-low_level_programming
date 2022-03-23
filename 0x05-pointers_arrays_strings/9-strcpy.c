@@ -11,10 +11,10 @@ char *_strcpy(char *dest, char *src)
 {
 	char *d;
 	int a, b;
-	
+
 	for (a = 0; a < 1; a++)
 	{
-		if (src == "")
+		if (src = "")
 			break;
 		d = dest;
 		b = 0;
