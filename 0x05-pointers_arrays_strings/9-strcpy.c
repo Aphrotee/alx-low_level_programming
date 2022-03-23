@@ -14,7 +14,7 @@ char *_strcpy(char *dest, char *src)
 	
 	for (a = 0; a < 1; a++)
 	{
-		if (*src == '\0')
+		if (src == "")
 			break;
 		d = dest;
 		b = 0;
@@ -22,9 +22,9 @@ char *_strcpy(char *dest, char *src)
 		{
 			*dest = *src;
 			src++;
-			dest++;
 			if (*src == '\0')
 				break;
+			dest++;
 		}
 	}
 	return (d);
