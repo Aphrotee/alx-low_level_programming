@@ -32,9 +32,9 @@ void puts_half(char *str)
 		else
 			n = (len - 1) / 2;
 		i = 0;
-		while (i <= n)
+		while (i < n)
 		{
-			str++;
+			str--;
 			i++;
 		}
 		j = 0;
