@@ -1,30 +1,6 @@
 #include "main.h"
 
 /**
- * _strlen - returns string length
- * @s: string to count its length
- *
- * Return: string length
- */
-int _strlen(char *s)
-{
-	int i, j, k;
-
-	i = 0;
-	j = 0;
-	while (i < 2)
-	{
-		if (*s == '\0')
-		{
-			k = j;
-			break;
-		}
-		s++;
-		j++;
-	}
-	return (k);
-}
-/**
  * puts_half - prints second half of string
  * @str: string to print
  *
@@ -32,13 +8,25 @@ int _strlen(char *s)
  */
 void puts_half(char *str)
 {
-	int len, n, i, j, k;
+	int len, i, j, k, l, m, n;
 
 	for (k = 0; k < 1; k++)
 	{
 		if (*str == '\0')
 			break;
-		len = _strlen(char *str);
+		l = 0;
+		m = 0;
+		while (l < 1)
+		{
+			if (*str == '\0')
+			{
+				k = m;
+				break;
+			}
+			str++;
+			m++;
+		}
+		len = k;
 		if (len % 2 == 0)
 			n = len / 2;
 		else
