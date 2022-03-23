@@ -8,9 +8,9 @@
  */
 void puts_half(char *str)
 {
-	int len, i, j, k, l, m, n;
+	int len, a, i, j, k, l, m;
 
-	for (k = 0; k < 1; k++)
+	for (a = 0; a < 1; a++)
 	{
 		if (*str == '\0')
 			break;
@@ -38,12 +38,11 @@ void puts_half(char *str)
 			i++;
 		}
 		j = 0;
-		while (j < 1)
+		while (j < n)
 		{
-			if (*str == '\0')
-				break;
 			_putchar(*str);
 			str++;
+			j++;
 		}
 	}
 	_putchar('\n');
