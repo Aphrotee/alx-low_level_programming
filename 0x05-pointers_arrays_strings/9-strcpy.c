@@ -7,19 +7,22 @@
  *
  * Return: pointer of dest
  */
-char *_strcpy(char *src, char *dest)
+char *_strcpy(char *dest, char *src)
 {
-	int d, i;
+	char *d;
+	int a;
 
-	i = 0;
-	while (i < 1)
+	for (a = 0; a < 1; a++)
 	{
-		*dest = *src;
 		if (*src == '\0')
 			break;
-		src++;
-		dest++;
+		d = dest;
+		while (*src != '\0')
+		{
+			*dest = *src;
+			src++;
+			dest++;
+		}
 	}
-	d = dest;
 	return (d);
 }
