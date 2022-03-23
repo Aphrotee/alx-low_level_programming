@@ -10,43 +10,38 @@ void rev_string(char *s)
 {
 	char a = *s;
 	int i, j, k, l, m;
-	char *r, b;
+	char *r, b, c;
 
 	for (m = 0; m < 1; m++)
 	{
 		if (*s == '\0')
 			break;
 		i = 0;
+		j = 0;
 		while (i < 1)
 		{
 			if (*s == '\0')
 				break;
 			s++;
+			j++;
 		}
-		s--;
-		b = *s;
-		j = 0;
-		while (j < 1)
+		c = j;
+		while (j >= 0)
 		{
 			*r = *s;
-			
-			if (*s == a)
-				break;
 			r++;
 			s--;
+			j--; 
 		}
 		k = 0;
-		while (k < 1)
+		while (k <= c)
 		{
-			if (*r == b)
-				break;
 			r--;
+			k++;
 		}
 		l = 0;
-		while (l < 1)
+		while (l <= c)
 		{
-			if (*r == '\0')
-				break;
 			*s = *r;
 			r++;
 			s++;
