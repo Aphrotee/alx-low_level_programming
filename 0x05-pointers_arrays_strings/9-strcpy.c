@@ -9,18 +9,29 @@
  */
 char *_strcpy(char *src, char *dest)
 {
-	int i;
+	int b, i, j, k;
 	char *d, a;
-
+	
 	i = 0;
+	j = 0;
 	while (i < 1)
+	{
+		if (*src == '\0')
+		{
+			k = j;
+			break;
+		}
+		src++;
+		j++;
+	}
+	b = 0;
+	while (b < k)
 	{
 		a = *src;
 		*dest = a;
-		if (*src == '\0')
-			break;
 		src++;
 		dest++;
+		b++;
 	}
 	d = dest;
 	return (d);
