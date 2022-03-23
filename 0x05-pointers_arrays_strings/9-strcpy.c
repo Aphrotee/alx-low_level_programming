@@ -12,7 +12,6 @@ char *_strcpy(char *src, char *dest)
 	int b;
 	char *d;
 	
-	}
 	b = 0;
 	while (b < 1)
 	{
