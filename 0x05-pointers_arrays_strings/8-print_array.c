@@ -5,7 +5,7 @@
  * print_array - prints an array
  * @a: array pointer
  * @n: index array to be printed up to
- * 
+ *
  * Return: void
  */
 void print_array(int *a, int n)
