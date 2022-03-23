@@ -1,6 +1,5 @@
 #include "main.h"
 
-
 /**
  * _strncpy - copies n bytes of one string to another
  * @src: string to be copied and pasted
