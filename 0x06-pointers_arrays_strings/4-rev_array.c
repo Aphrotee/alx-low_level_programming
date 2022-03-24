@@ -15,8 +15,8 @@ void reverse_array(int *a, int n)
 	i = 0;
 	while (i < n)
 	{
-		*b = a[i];
-		_putchar(*b);
+		bb[i] = a[i];
+		_putchar(bb[i] + '0');
 		b++;
 		i++;
 	}
@@ -24,7 +24,8 @@ void reverse_array(int *a, int n)
 	j = n - 1;
 	while (j >= 0)
 	{
-		a[k] = bb[j];
+		a[k] = *b;
 		j--;
+		b--;
 	}
 }
