@@ -16,6 +16,7 @@ void reverse_array(int *a, int n)
 	while (i < n)
 	{
 		*b = a[i];
+		_putchar(*b);
 		b++;
 		i++;
 	}
