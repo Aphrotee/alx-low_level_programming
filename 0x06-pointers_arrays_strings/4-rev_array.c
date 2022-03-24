@@ -16,23 +16,14 @@ void reverse_array(int *a, int n)
 	i = 0;
 	while (i < n)
 	{
-		*b = *a;
+		bb[i] = a[i];
 		i++;
-		a++;
-		b++;
 	}
 	k = 0;
-	while (k < n)
-	{
-		a--;
-		k++;
-	}
 	j = n - 1;
 	while (j >= 0)
 	{
-		*a = *b;
-		b--;
-		a++;
+		a[k] = bb[j];
 		j--;
 	}
 }
