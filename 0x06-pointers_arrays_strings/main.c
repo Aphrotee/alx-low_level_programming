@@ -16,9 +16,3 @@ int main(void)
     printf("%d\n", _strcmp(s1, s1));
     return (0);
 }
-        }
-        printf("0x%02x", s1[i]);
-    }
-    printf("\n");
-    return (0);
-}
