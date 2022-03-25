@@ -17,7 +17,9 @@ char *rot13(char *s)
 	{
 		if (((*s >= 'A') && (*s <= 'M')) || ((*s >= 'a') && (*s <= 'm')))
 		{
+			_putchar(*s);
 			*s += 13;
+			_putchar(*s);
 		}
 		s++;
 		j++;
