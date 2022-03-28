@@ -2,7 +2,7 @@
 
 /**
  * _memset - fills the first n bytes of a memory area with a character
- * @s: memory area 
+ * @s: memory area
  * @b: character used to fill memory area
  * @n: number of bytes to fill
  *
