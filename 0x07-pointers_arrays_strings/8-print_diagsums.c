@@ -19,13 +19,13 @@ void print_diagsums(int *a, int size)
 	for (i = 0; i < n - 1; i++)
 	{
 		b += *(a + (n + 1));
-		a += a + (n + 1);
+		a += (n + 1);
 	}
 	a = strt;
 	for (i = 0; i < n - 1; i++)
 	{
 		c += *(a + (n - 1));
-		a += a + (n - 1);
+		a += (n - 1);
 	}
 	printf("%d, %d", b, c);
 }
