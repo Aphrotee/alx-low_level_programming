@@ -25,7 +25,6 @@ void print_diagsums(int *a, int size)
 	for (i = 0; i < n - 1; i++)
 	{
 		c += *(a + (n - 1));
-		printf("%d\n", *(a + (n - 1)));
 		a += (n - 1);
 	}
 	printf("%d, %d\n", b, c);
