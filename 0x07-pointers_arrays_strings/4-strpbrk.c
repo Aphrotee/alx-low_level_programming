@@ -7,7 +7,7 @@
  *
  * Return: pointer to the first occurence
  */
-char *_strpbrk.c(char *s, char *accept)
+char *_strpbrk(char *s, char *accept)
 {
 	char *a, *b;
 
