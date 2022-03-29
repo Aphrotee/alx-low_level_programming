@@ -10,7 +10,7 @@
  */
 void print_diagsums(int *a, int size)
 {
-	int n, i, j, c, b;
+	int n, i, c, b;
 
 	n = size;
 	c = *(a + (n - 1));
@@ -19,9 +19,9 @@ void print_diagsums(int *a, int size)
 	{
 		b += *(b + (n + 1));
 	}
-	for (j = n - 1; i = 0; j >= 0; j--; i++)
+	for (i = 0; i < n - 1; i++)
 	{
-		c += a[i][j];
+		c += *(c + (n - 1));
 	}
 	printf("%d, %d", b, c);
 }
