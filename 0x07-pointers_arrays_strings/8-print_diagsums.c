@@ -21,7 +21,7 @@ void print_diagsums(int *a, int size)
 		b += *(a + (n + 1));
 		a += (n + 1);
 	}
-	a = strt;
+	a += (n - 1);
 	for (i = 0; i < n - 1; i++)
 	{
 		c += *(a + (n - 1));
