@@ -20,5 +20,7 @@ char *_strchr(char *s, char c)
 		s++;
 	}
 	d = s;
+	if (*s == '\0')
+		d = "nil";
 	return (d);
 }
