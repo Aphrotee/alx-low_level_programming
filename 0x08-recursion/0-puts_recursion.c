@@ -1,4 +1,5 @@
 #include "main.h"
+#include <unistd.h>
 
 /**
  * _puts_recursion - prints a string. This is basically how the puts function works.
