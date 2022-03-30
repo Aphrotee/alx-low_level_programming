@@ -9,21 +9,16 @@
  */
 char *_strchr(char *s, char c)
 {
-	char *d, a[];
+	char *d;
 
 	while (*s != '\0')
 	{
 		if (*s == c)
 		{
-			d = s;
 			break;
 		}
 		s++;
 	}
-	if (*s == '\0')
-	{
-		a[] = "nil";
-		d = a;
-	}
+	d = s;
 	return (d);
 }
