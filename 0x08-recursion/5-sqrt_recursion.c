@@ -8,17 +8,17 @@
  */
 
 /**
- * try_again - returns the squareroot of a number
+ * _try_again - returns the squareroot of a number
  * @n: number to be rooted
  * @i: dividend
  *
  * Return: squareroot of n
  */
 
-int try_again(int n, int i)
+int _try_again(int n, int i)
 {
 	int j;
-	
+
 	i++;
 	if (n < 0)
 		j = -1;
@@ -28,11 +28,11 @@ int try_again(int n, int i)
 		j = 1;
 	if (n > 1)
 	{
-		if ( i * i == n)
+		if (i * i == n)
 			j = i;
 		else
 		{
-			i = try_again(n, i);
+			i = _try_again(n, i);
 		}	j = i;
 	}
 	return (j);
@@ -49,11 +49,11 @@ int _sqrt_recursion(int n)
 		d  = 1;
 	if (n > 1)
 	{
-		if ( b * b == n)
+		if (b * b == n)
 			d = b;
 		else
 		{
-			b = try_again(n, b);
+			b = _try_again(n, b);
 			d = b;
 		}
 	}
