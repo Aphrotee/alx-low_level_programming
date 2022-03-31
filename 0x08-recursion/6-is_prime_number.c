@@ -15,9 +15,9 @@ int _is_prime_number(int n)
 		d = 0;
 	else
 	{
-		if ((n % b = 0) && (b != n))
+		if ((n % b == 0) && (b != n))
 			d = 0;
-		else if ((n % b = 0) && (b == n))
+		else if ((n % b == 0) && (b == n))
 			d = 1;
 		else
 		{
