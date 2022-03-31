@@ -17,6 +17,8 @@
 
 int try_again(int n, int i)
 {
+	int j;
+	
 	i++;
 	if (n < 0)
 		j = -1;
