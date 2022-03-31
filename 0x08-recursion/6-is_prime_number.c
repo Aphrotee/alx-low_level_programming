@@ -41,7 +41,7 @@ int try_again(int n, int i)
 
 	i++;
 	if (n <= 1)
-		d = 0;
+		j = 0;
 	else
 	{
 		if ((n % i == 0) && (i != n))
