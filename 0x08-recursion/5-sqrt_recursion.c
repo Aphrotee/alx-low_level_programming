@@ -19,39 +19,41 @@ int try_again(int n, int i)
 {
 	i++;
 	if (n < 0)
-		return (-1);
+		j = -1;
 	if (n == 0)
-		return (0);
+		j = 0;
 	if (n == 1)
-		return (1);
+		j = 1;
 	if (n > 1)
 	{
 		if ( i * i == n)
-			return (i);
+			j = i;
 		else
 		{
 			i = try_again(n, i);
-		}	return(i);
+		}	j = i;
 	}
+	return (j);
 }
 int _sqrt_recursion(int n)
 {
-	int b = 1;
+	int b = 1, d;
 
 	if (n < 0)
-		return (-1);
+		d = -1;
 	if (n == 0)
-		return (0);
+		d = 0;
 	if (n == 1)
-		return (1);
+		d  = 1;
 	if (n > 1)
 	{
 		if ( b * b == n)
-			return (b);
+			d = b;
 		else
 		{
 			b = try_again(n, b);
-			return(b);
+			d = b;
 		}
 	}
+	return (d);
 }
