@@ -1,5 +1,5 @@
 #include "main.h"
-try_again(int n, int i);
+int try_again(int n, int i);
 
 /**
  * _is_prime_number - checks if an input number is a prime number or not
@@ -35,7 +35,7 @@ int _is_prime_number(int n)
  *
  * Return: 1(if n is prime number), 0(otherwise)
  */
-try_again(int n, int i)
+int try_again(int n, int i)
 {
 	int j;
 
@@ -44,9 +44,9 @@ try_again(int n, int i)
 		d = 0;
 	else
 	{
-		if ((n % i = 0) && (i != n))
+		if ((n % i == 0) && (i != n))
 			j = 0;
-		else if ((n % i = 0) && (i == n))
+		else if ((n % i == 0) && (i == n))
 			j = 1;
 		else
 		{
