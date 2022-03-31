@@ -6,6 +6,9 @@
  *
  * Return: squareroot of n
  */
+trial_guess(int a)
+{
+}
 int _sqrt_recursion(int n)
 {
 }
