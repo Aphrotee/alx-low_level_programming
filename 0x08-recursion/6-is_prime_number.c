@@ -2,12 +2,12 @@
 int try_again(int n, int i);
 
 /**
- * _is_prime_number - checks if an input number is a prime number or not
+ * is_prime_number - checks if an input number is a prime number or not
  * @n: number to be checked
  *
  * Return: 1(if n is prime number), 0(otherwise)
  */
-int _is_prime_number(int n)
+int is_prime_number(int n)
 {
 	int b = 2, d;
 
