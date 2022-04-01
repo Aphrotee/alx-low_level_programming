@@ -2,13 +2,16 @@
 
 /**
  * main - entry point
- * @argc: size of command array
+ * @argc: size of argv
  * @argv: command array
  *
  * Return: 0
  */
 int main(int argc, char *argv[])
 {
-	printf("%s\n", argv[0]);
+	if (argc == 1)
+		printf("%s\n", *argv);
+	else
+		printf("%s\n", argv[0]);
 	return (0);
 }
