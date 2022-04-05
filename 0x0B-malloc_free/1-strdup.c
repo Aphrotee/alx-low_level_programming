@@ -9,20 +9,18 @@
  */
 char *_strdup(char *str)
 {
-	char *d, *nstr;
-	int i = 0;
+	char *d, *nstr = malloc(sizeof(str) + 1);
 
 	if (str == NULL)
 		d = NULL;
 	else
 	{
-		nstr = malloc(sizeof(str) + 1);
 		d = nstr;
 		while (*str != '\0')
 		{
-			nstr[i] = *str;
+			*nstr = *str;
 			str++;
-			i++;
+			nstr++;
 		}
 	}
 	return (d);
