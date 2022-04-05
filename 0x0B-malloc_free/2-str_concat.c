@@ -13,13 +13,13 @@ char *str_concat(char *s1, char *s2)
 	char *d, *nstr = malloc(sizeof(s1) + sizeof(s2));
 
 	d = nstr;
-	while (s1 != '\0')
+	while (*s1 != '\0')
 	{
 		*nstr = *s1;
 		nstr++;
 		s1++;
 	}
-	while (s2 != '\0')
+	while (*s2 != '\0')
 	{
 		*nstr = *s2;
 		nstr++;
