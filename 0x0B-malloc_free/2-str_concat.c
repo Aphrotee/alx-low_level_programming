@@ -29,5 +29,6 @@ char *str_concat(char *s1, char *s2)
 		nstr++;
 		s2++;
 	}
+	free (d):
 	return (d);
 }
