@@ -3,10 +3,10 @@
 
 /**
  * alloc_grid - creates a two dimensional array to grid
- * @height; height of grid
+ * @height: height of grid
  * @width: width of grid
  *
- * Reurn: pointer to grid
+ * Return: pointer to grid
  */
 int **alloc_grid(int width, int height)
 {
@@ -20,5 +20,6 @@ int **alloc_grid(int width, int height)
 			grid[i][j] = 0;
 		}
 	}
+	free (grid);
 	return (grid);
 }
