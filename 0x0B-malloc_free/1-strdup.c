@@ -16,12 +16,7 @@ char *_strdup(char *str)
 	else
 	{
 		d = nstr;
-		while (*str != '\0')
-		{
-			*nstr = *str;
-			str++;
-			nstr++;
-		}
+		strcpy(nstr, str);
 	}
 	return (d);
 }
