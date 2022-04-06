@@ -38,11 +38,11 @@ int main(void)
 {
     int **grid;
 
-    grid = alloc_grid(0, 0);
+    grid = alloc_grid(48, 32);
     if (grid == NULL)
     {
         return (1);
     }
-    print_grid(grid, 0, 0);
+    print_grid(grid, 48, 32);
     return (0);
 }
