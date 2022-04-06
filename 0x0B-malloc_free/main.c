@@ -38,18 +38,6 @@ int main(void)
 {
     int **grid;
 
-    grid = alloc_grid(48, 32);
-    if (grid == NULL)
-    {
-        return (1);
-    }
-    print_grid(grid, 48, 32);
-    grid = alloc_grid(128, 128);
-    if (grid == NULL)
-    {
-        return (1);
-    }
-    print_grid(grid, 128, 128);
     grid = alloc_grid(0, 0);
     if (grid == NULL)
     {
