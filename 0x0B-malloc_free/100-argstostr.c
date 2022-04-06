@@ -14,7 +14,7 @@ char *argstostr(int ac, char **av)
 	int i;
 
 	d = strr;
-	strr = malloc(sizeof(char*) * ac * 2);
+	strr = malloc((sizeof(char *) * ac * 2) + 4012);
 	for (i = 0; i < ac; i++)
 	{
 		*strr = **av;
