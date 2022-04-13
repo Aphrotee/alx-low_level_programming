@@ -15,8 +15,16 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog_t *d, *new = (dog_t *)malloc(sizeof(dog_t));
 
 	d = new;
-	new->name = name;
-	new->age = age;
-	new->owner = owner;
+	if (new != NULL)
+	{
+		new->name = name;
+		new->age = age;
+		new->owner = owner;
+	}
+	else
+	{
+		free(new);
+		d = NULL;
+	}
 	return (d);
 }
