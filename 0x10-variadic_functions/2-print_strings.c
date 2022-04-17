@@ -10,7 +10,7 @@
  *
  * Return: nothing
  */
-void print_strings(const char * separator, const unsigned int n, ...)
+void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list ap;
 	unsigned int i;
@@ -29,7 +29,7 @@ void print_strings(const char * separator, const unsigned int n, ...)
 			printf("%s", a);
 		else
 			printf("(nil)");
-		if (i != n - 1)
+		if ((i != n - 1) && (separator != NULL))
 			printf("%s", separator);
 	}
 	va_end(ap);
