@@ -1,6 +1,8 @@
 #include "lists.h"
 #include <stdlib.h>
 #include <stddef.h>
+#include <stdio.h>
+
 /**
  * print_list - prints the content of the node which is a string
  * @h: pointer to struct node
@@ -25,7 +27,10 @@ size_t print_list(const list_t *h)
 		s = ptr->str;
 		if (s == NULL)
 			n = 0;
-		printf("[%u] ", n);
+		_putchar('[');
+		_putchar(n + '0');
+		_putchar(']');
+		_putchar(' ');	
 		if (s == NULL)
 		{
 			_putchar('(');
