@@ -25,10 +25,7 @@ size_t print_list(const list_t *h)
 		s = ptr->str;
 		if (s == NULL)
 			n = 0;
-		_putchar('[');
-		_putchar(n + '0');
-		_putchar(']');
-		_putchar(' ');
+		printf("[%u] ", n);
 		if (s == NULL)
 		{
 			_putchar('(');
@@ -49,5 +46,5 @@ size_t print_list(const list_t *h)
 		ptr = ptr->next;
 		d++;
 	}
-	return(d);
+	return (d);
 }
