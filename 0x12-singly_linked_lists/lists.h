@@ -16,7 +16,12 @@ typedef struct list_s
     unsigned int len;
     struct list_s *next;
 } list_t;
+<<<<<<< HEAD
 size_t print_list(const list_t *h);
 int _putchar(char c);
 size_t list_len(const list_t *h);
+=======
+extern size_t print_list(const list_t *h);
+extern int _putchar(char c);
+>>>>>>> 7cb96f6b7ea2a23acd7dd14ca230850b36015f5a
 #endif
