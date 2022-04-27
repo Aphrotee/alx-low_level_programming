@@ -17,4 +17,5 @@ typedef struct list_s
 } list_t;
 extern size_t print_list(const list_t *h);
 extern int _putchar(char c);
+extern size_t list_len(const list_t *h);
 #endif
