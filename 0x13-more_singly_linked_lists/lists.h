@@ -11,8 +11,8 @@
  */
 typedef struct listint_s
 {
-    int n;
-    struct listint_s *next;
+	int n;
+	struct listint_s *next;
 } listint_t;
 extern int _putchar(char c);
 extern size_t print_listint(const listint_t *h);
@@ -24,8 +24,8 @@ extern void free_listint2(listint_t **head);
 extern int pop_listint(listint_t **head);
 extern listint_t *get_nodeint_at_index(listint_t *head, unsigned int index);
 extern int sum_listint(listint_t *head);
-extern listint_t *insert_nodeint_at_index(listint_t **head,
-                                        unsigned int idx, int n);
+extern listint_t *insert_nodeint_at_index(listint_t **head, 
+					unsigned int idx, int n);
 extern int delete_nodeint_at_index(listint_t **head, unsigned int index);
 extern listint_t *reverse_listint(listint_t **head);
 extern size_t print_listint_safe(const listint_t *head);
