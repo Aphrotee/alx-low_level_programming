@@ -4,7 +4,7 @@
 
 /**
  * add_nodeint_end - adds a new element to the end of the listint_t list
- * @head: list listint_t 
+ * @head: list listint_t
  * @n: integer to be added
  *
  * Return: address of list
@@ -19,7 +19,7 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	temp = *head;
 	while (temp->next != NULL)
 		temp = temp->next;
-	temp->next = h; 
+	temp->next = h;
 	h->n = n;
 	h->next = NULL;
 	return (*head);
