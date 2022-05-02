@@ -11,9 +11,9 @@ void print_to_98(int n)
 {
 	int i;
 
-	print_number(n);
 	if (n > 98)
 	{
+		print_number(n);
 		for (i = n - 1; i >= 98; i--)
 		{
 			_putchar(',');
@@ -23,6 +23,7 @@ void print_to_98(int n)
 	}
 	else if (n < 98)
 	{
+		print_number(n);
 		for (i = n + 1; i <= 98; i++)
 		{
 			_putchar(',');
