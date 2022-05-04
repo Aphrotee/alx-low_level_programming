@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * print_binary - prints the binary of an integer
@@ -13,17 +12,16 @@ void print_binary(unsigned long int n)
 
 	if (n == 0)
 	{
-		printf("%lu", n);
+		_putchar('0');
 		return;
 	}
 	a = n >> 1;
 	b = a << 1;
-	if (n - b == 1)
-		c = 1;
-	else if (n - b == 0)
-		c = 0;
 	if (a != 0)
 		print_binary(a);
-	printf("%lu", c);
+	if (n - b == 1)
+		_putchar('1');
+	else if (n - b == 0)
+		_putchar('0');
 	return;
 }
