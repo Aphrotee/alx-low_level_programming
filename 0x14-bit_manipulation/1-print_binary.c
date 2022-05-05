@@ -8,7 +8,7 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int a , b;
+	unsigned long int a, b;
 
 	if (n == 0)
 	{
@@ -23,5 +23,4 @@ void print_binary(unsigned long int n)
 		_putchar('1');
 	else if (n - b == 0)
 		_putchar('0');
-	return;
 }
