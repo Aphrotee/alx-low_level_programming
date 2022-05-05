@@ -1,52 +1,33 @@
+
 #include "main.h"
 
 /**
- * print_binary - prints the binary of an integer
+ * get_bit - prints the binary of an integer
  * @n: int to be convertsed to binary
+ * @index: index of bit wanted
  *
- * Return: nothing
+ * Return: integer
  */
-void print_binary(unsigned long int n)
+int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned long int a, b;
+	unsigned long int a, b, c, d, e;
+	unsigned int i, j = 0, k;
 
-	if (n == 0)
-	{
-		_putchar('0');
-		return;
-	}
 	a = n >> 1;
-	b = a << 1;
-	if (a != 0)
-		print_binary(a);
-	if (n - b == 1)
-		_putchar('1');
-	else if (n - b == 0)
-		_putchar('0');
-}
-
-
-/**
- * print_binary - prints the binary of an integer
- * @n: int to be convertsed to binary
- *
- * Return: nothing
- */
-void print_binary(unsigned long int n)
-{
-	unsigned long int a, b;
-
-	if (n == 0)
+	while (a != 0)
 	{
-		_putchar('0');
-		return;
+		a = a >> 1;
+		j++;
 	}
-	a = n >> 1;
-	b = a << 1;
-	if (a != 0)
-		print_binary(a);
-	if (n - b == 1)
-		_putchar('1');
-	else if (n - b == 0)
-		_putchar('0');
+	i = j - index;
+	k = 0;
+	while (k < i)
+	{
+		e = c;
+		c = c >> 1;
+		d = c << 1;
+		k++;
+	}
+	x = (int)(e - d);
+	return (x);
 }
