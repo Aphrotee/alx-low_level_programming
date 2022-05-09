@@ -11,8 +11,8 @@ int get_bit(unsigned long int n, unsigned int index)
 {
 	unsigned long int a, b, c;
 	unsigned int i = 1, j = 1, k;
-
 	int x, arr[50];
+
 	a = n >> 1;
 	arr[0] = (int)(n - (a << 1));
 	while (a != 0)
