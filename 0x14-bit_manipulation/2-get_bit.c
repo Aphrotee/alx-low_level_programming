@@ -1,4 +1,3 @@
-
 #include "main.h"
 
 /**
@@ -10,24 +9,21 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned long int a, b, c, d, e;
-	unsigned int i, j = 0, k;
-
+	unsigned long int a, b, c;
+	unsigned int i = 1, j = 1, k;
+	int x, arr[20];
 	a = n >> 1;
+	arr[0] = (int)(n - (a << 1));
 	while (a != 0)
 	{
+		c = a;
 		a = a >> 1;
+		b = a << 1;
+		arr[i] = (int)(c - b);
 		j++;
+		i++;
 	}
-	i = j - index;
-	k = 0;
-	while (k < i)
-	{
-		e = c;
-		c = c >> 1;
-		d = c << 1;
-		k++;
-	}
-	x = (int)(e - d);
+	k = index;
+	x = arr[k];
 	return (x);
 }
