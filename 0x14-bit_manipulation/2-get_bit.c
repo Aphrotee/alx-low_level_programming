@@ -9,22 +9,28 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned long int a, b, c;
-	unsigned int i = 1, j = 1, k;
-	int x, arr[50];
+	unsigned long int a, b, c, x, y, z;
+	unsigned int i = 1, j = 1;
+	
 
 	a = n >> 1;
-	arr[0] = (int)(n - (a << 1));
+	x = n >> 1;
 	while (a != 0)
 	{
 		c = a;
 		a = a >> 1;
 		b = a << 1;
-		arr[i] = (int)(c - b);
 		j++;
+	}
+	if (index > j)
+		return (-1);
+	while (i < (index + 1))
+	{
+		z = x;
+		x = x >> 1;
+		y = x << 1;
 		i++;
 	}
-	k = index;
-	x = arr[k];
-	return (x);
+	k = (int)(z - y)
+	return (k);
 }
