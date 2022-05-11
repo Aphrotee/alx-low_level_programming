@@ -44,8 +44,9 @@ int set_bit(unsigned long int *n, unsigned int index)
 			arr[l] = 0;
 		l++;
 	}
+	else
+		l = i;
 	arr[index] = 1;
-	l = i;
 	for (m = 0; m < l; m++)
 		k += arr[m] << m;
 	*n = k;
