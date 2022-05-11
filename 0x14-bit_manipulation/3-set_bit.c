@@ -13,7 +13,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned long int a, b, x, y, z, p = *n;
 	unsigned int i = 1, j = 1, m;
-	int *arr, k, l = 0;
+	int *arr, k = 0;
 
 	a = p >> 1;
 	x = p >> 1;
@@ -43,10 +43,11 @@ int set_bit(unsigned long int *n, unsigned int index)
 			arr[i] = 0;
 			i++;
 		}
+		i++;
 	}
 	arr[index] = 1;
-	for (m = 0, m < i, m++)
-		l += arr[m] << m;
-	*n = l;
+	for (m = 0; m < i; m++)
+		k += arr[m] << m;
+	*n = k;
 	return (1);
 }
