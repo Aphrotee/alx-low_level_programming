@@ -12,9 +12,11 @@
 int set_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned long int a, b, x, y, z, p = *n;
-	unsigned int i = 1, j = 1, m;
+	unsigned int i = 1, j = 1, m, l;
 	int *arr, k = 0;
 
+	if (index > 100)
+		return (-1);
 	a = p >> 1;
 	x = p >> 1;
 	b = x << 1;
@@ -38,15 +40,12 @@ int set_bit(unsigned long int *n, unsigned int index)
 	}
 	if (index > j)
 	{
-		while (i < index)
-		{
-			arr[i] = 0;
-			i++;
-		}
-		i++;
+		for (l = i; l < index; l++)
+			arr[l] = 0;
+		l++;
 	}
 	arr[index] = 1;
-	for (m = 0; m < i; m++)
+	for (m = 0; m < l; m++)
 		k += arr[m] << m;
 	*n = k;
 	return (1);
