@@ -1,0 +1,83 @@
+#include <stdlib.h>
+#include <stdio.h>
+
+/**
+ * len_bit - counts the number of bits of the binary of an int
+ * @n: input
+ *
+ * Return: number of bits
+ */
+int len_bit(unsigned long int n)
+{
+	unsigned long int a;
+	int d = 1;
+
+	a = n >> 1;
+	while (a != 0)
+	{
+		a = a >> 1;
+		d++;
+	}
+	printf("len:%d\n", d);
+	return (d);
+}
+/**
+ * flip_bits - checks the number of bits needed 
+ * to be flipped for both inputs to be equal
+ * @n: input integer
+ * @m: input integer
+ *
+ * Return: number of bits
+ */
+unsigned int flip_bits(unsigned long int n, unsigned long int m)
+{
+	int a, b, p, s = 1, t = 1, r, *aa, *ab;
+	unsigned int d = 0;
+	unsigned long int i, j, w, y;
+
+	a = len_bit(n);
+	b = len_bit(m);
+	if (a > b)
+		p = a;
+	else
+		p = b;
+	printf("p:%d\n", p);
+	aa = malloc(sizeof(int) * p);
+	ab = malloc(sizeof(int) * p);
+	i = n >> 1;
+	aa[0] = (int)(n - (i << 1));
+	j = m >> 1;
+	ab[0] = (int)(m - (j << 1));
+	printf("%d", aa[0]);
+	while (i != 0)
+	{
+		w = i;
+		i = i >> 1;
+		y = i << 1;
+		aa[s] = (int)(w - y);
+		printf("%d", aa[s]);
+		s++;
+	}
+	printf("\n%d", ab[0]);
+	while (j != 0)
+	{
+		w = j;
+		j = j >> 1;
+		y = j << 1;
+		ab[t] = (int)(w - y);
+		printf("%d", ab[t]);
+		t++;
+	}
+	printf("\n");
+	for (r = s; r < p; r++)
+		aa[r] = 0;
+	for (r = t; r < p; r++)
+		ab[r] = 0;
+	for (r = 0; r < p; r++)
+	{
+		printf("%d:%d", aa[r], ab[r]);
+		if (aa[r] != ab[r])
+			d++;
+	}
+	return (d);
+}
