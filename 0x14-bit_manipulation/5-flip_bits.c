@@ -21,7 +21,7 @@ int len_bit(unsigned long int n)
 	return (d);
 }
 /**
- * flip_bits - checks the number of bits needed 
+ * flip_bits - checks the number of bits needed
  * to be flipped for both inputs to be equal
  * @n: input integer
  * @m: input integer
