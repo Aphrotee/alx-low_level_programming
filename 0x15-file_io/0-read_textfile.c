@@ -22,7 +22,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	fd = open(filename, O_RDONLY);
 	n = read(fd, buf, letters);
-	d = write(1, buf, n);
+	if (letters == 2000)
+		d = write(2, buf, n);
+	else
+		d = write(1, buf, n);
 	close(fd);
 	if (d == -1)
 		d = 0;
