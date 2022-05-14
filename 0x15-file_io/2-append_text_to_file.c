@@ -26,7 +26,7 @@ int append_text_to_file(const char *filename, char *text_content)
 		w = access(filename, W_OK);
 		r = access(filename, R_OK);
 	}
-	if ((fd != -1) && (text_content != NULL) && (w == 0) && (r == 0))
+	if ((fd != -1) && (text_content != NULL))
 	{
 		a = write(fd, text_content, strlen(text_content));
 		if (a != -1)
@@ -34,6 +34,8 @@ int append_text_to_file(const char *filename, char *text_content)
 		else
 			d = -1;
 	}
+	if ((w == 0) && (r == 0))
+		d = -1;
 	close(fd);
 	return (d);
 }
