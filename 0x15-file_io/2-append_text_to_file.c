@@ -27,14 +27,12 @@ int append_text_to_file(const char *filename, char *text_content)
 		r = access(filename, R_OK);
 	}
 	if ((fd != -1) && (text_content != NULL))
-	{
 		a = write(fd, text_content, strlen(text_content));
-		if (a != -1)
-			d = 1;
-		else
-			d = -1;
-	}
 	if ((w == 0) && (r == 0))
+		d = -1;
+	if (a != -1)
+		d = 1;
+	else if (a == -1)
 		d = -1;
 	if (text_content == NULL)
 		d = 1;
