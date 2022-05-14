@@ -28,7 +28,6 @@ int append_text_to_file(const char *filename, char *text_content)
 	}
 	if ((fd != -1) && (text_content != NULL) && (w == 0) && (r == 0))
 	{
-		printf("r:%d, w:%d\n", r, w);
 		a = write(fd, text_content, strlen(text_content));
 		if (a != -1)
 			d = 1;
