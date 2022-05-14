@@ -1,4 +1,5 @@
 #include <stddef.h>
+#include <stdio.h>
 #include <string.h>
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -14,18 +15,26 @@
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int fd, d;
+	int fd, d = -1, r, w;
 	ssize_t a;
 
 	if (filename == NULL)
 		return (-1);
-	fd = open(filename, O_WRONLY | O_APPEND);
-	if ((fd != -1) && (text_content != NULL))
+	fd = open(filename, O_RDWR | O_APPEND);
+	if (fd != -1)
+	{
+		w = access(filename, W_OK);
+		r = access(filename, R_OK);
+	}
+	if ((fd != -1) && (text_content != NULL) && (w == 0) && (r == 0))
+	{
+		printf("r:%d, w:%d\n", r, w);
 		a = write(fd, text_content, strlen(text_content));
-	if (a != -1)
-		d = 1;
-	else
-		d = -1;
+		if (a != -1)
+			d = 1;
+		else
+			d = -1;
+	}
 	close(fd);
 	return (d);
 }
