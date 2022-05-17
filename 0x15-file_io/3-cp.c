@@ -15,7 +15,7 @@
  */
 int main(int ac, const char **av)
 {
-	int a, b, c, d = 0, fd2;
+	int a, b, c, fd2;
 	FILE *fd1;
 
 	if (ac != 3)
@@ -36,10 +36,7 @@ int main(int ac, const char **av)
 		exit(99);
 	}
 	for (c = getc(fd1); c != EOF; c = getc(fd1))
-	{
 		write(fd2, &c, 1);
-		d++;
-	}
 	a = fclose(fd1);
 	b = close(fd2);
 	if (a == -1)
@@ -51,5 +48,5 @@ int main(int ac, const char **av)
 	{
 		dprintf(2, "Error: Can't close fd %d\n", fd2);
 	}
-	return (d);
+	return (0);
 }
