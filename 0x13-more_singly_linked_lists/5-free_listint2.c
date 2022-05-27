@@ -3,12 +3,12 @@
 #include "lists.h"
 
 /**
- * free_listint - frees all memory allocated to listint_t
+ * free_listint2 - frees all memory allocated to listint_t
  * @head: list listint_t
  *
  * Return: nothing
  */
-void free_listint(listint_t *head)
+void free_listint2(listint_t *head)
 {
 	listint_t *temp, *h = head;
 
