@@ -10,15 +10,13 @@
  */
 void free_listint(listint_t *head)
 {
-	listint_t *temp = (listint_t *)malloc(sizeof(listint_t));
-	listint_t *tem = (listint_t *)malloc(sizeof(listint_t));
+	listint_t *temp;
 
-	temp = head;
-	while (temp->next != NULL)
+	while (head->next != NULL)
 	{
-		tem = temp->next;
-		free(temp);
-		temp = tem;
+		temp = head->next;
+		free(head);
+		head = temp;
 	}
-	free(tem);
+	free(head);
 }

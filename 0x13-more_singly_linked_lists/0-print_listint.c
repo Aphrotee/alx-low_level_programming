@@ -11,7 +11,7 @@
  */
 size_t print_listint(const listint_t *head)
 {
-	const listint_t *temp = (listint_t *)malloc(sizeof(listint_t));
+	const listint_t *temp;
 	size_t d = 0;
 
 	temp = head;
