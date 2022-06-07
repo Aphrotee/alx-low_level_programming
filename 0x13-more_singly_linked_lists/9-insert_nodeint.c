@@ -12,34 +12,36 @@
  *
  * Return: pointer
  */
-listint_t *insert_node(listint_t *new, listint_t *j, listint_t **head, unsigned int idx)
+listint_t *insert_node(listint_t *new, listint_t *j, listint_t **head,
+		       unsigned int idx)
 {
 	unsigned int i = 0;
-	listint_t  *h = *head;
+	listint_t *h = *head;
+
 	while (h != NULL)
+	{
+		if (idx == 0)
 		{
-			if (idx == 0)
-			{
-				new->next = h;
-				*head = new;
-				return (new);
-			}
-			else if (i == idx)
-			{
-				j->next = new;
-				new->next = h;
-				return (new);
-			}
-			else if (h->next == NULL)
-			{
-				h->next = new;
-				new->next = NULL;
-				return (new);
-			}
-			i++;
-			j = h;
-			h = h->next;
+			new->next = h;
+			*head = new;
+			return (new);
 		}
+		else if (i == idx)
+		{
+			j->next = new;
+			new->next = h;
+			return (new);
+		}
+		else if (h->next == NULL)
+		{
+			h->next = new;
+			new->next = NULL;
+			return (new);
+		}
+		i++;
+		j = h;
+		h = h->next;
+	}
 	return (NULL);
 }
 /**
