@@ -8,22 +8,28 @@
  * @idx: index
  * @n: data n
  *
- * Return: int at deleted node
+ * Return: inserted node
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	listint_t *h, *j, *new = (listint_t *)malloc(sizeof(listint_t));
-	unsigned int i;
+	unsigned int i = 0;
 
 	if (head == NULL || *head == NULL)
 		return (NULL);
 	h = *head;
+	new->n = n;
 	j = h;
 	while (h != NULL)
 	{
-		if (i == idx)
+		if (idx == 0)
 		{
-			new->n = n;
+			new->next = h;
+			*head = new;
+			return (new);
+		}
+		else if (i == idx)
+		{
 			j->next = new;
 			new->next = h;
 			return (new);
