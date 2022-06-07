@@ -8,13 +8,14 @@
  * @new: node listint_t
  * @idx: index
  * @j: pointer
- * @h: pointer
+ * @head: pointer to pointer
  *
  * Return: pointer
  */
-listint_t *insert_node(listint_t *new, listint_t *j, listint_t *h, unsigned int idx)
+listint_t *insert_node(listint_t *new, listint_t *j, listint_t **head, unsigned int idx)
 {
 	unsigned int i = 0;
+	listint_t  *h = *head;
 	while (h != NULL)
 		{
 			if (idx == 0)
@@ -51,7 +52,7 @@ listint_t *insert_node(listint_t *new, listint_t *j, listint_t *h, unsigned int 
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *h, *d, *j, *c, *new = (listint_t *)malloc(sizeof(listint_t));
+	listint_t *d, *j, *c, *new = (listint_t *)malloc(sizeof(listint_t));
 	unsigned int x = 0;
 
 	new->n = n;
@@ -65,7 +66,6 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	}
 	else if (*head == NULL && idx != 0)
 		return (NULL);
-	h = *head;
 	c = *head;
 	j = h;
 	while (c != NULL)
@@ -75,6 +75,6 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	}
 	if (idx > x)
 		return (NULL);
-	d = insert_node(new, j, h, idx);
+	d = insert_node(new, j, head, idx);
 	return (d);
 }
