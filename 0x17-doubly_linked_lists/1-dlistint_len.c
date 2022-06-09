@@ -3,13 +3,12 @@
 #include "lists.h"
 
 /**
- * print_dlistint - prints the elements of a doubly linked lists
- * and returns number of elements
+ * dlistint_len - Returns number of elements in a doubly linked list
  * @h: head of linked list
  *
  * Return: number of elements in list
  */
-size_t print_dlistint(const dlistint_t *h)
+size_t dlistint_len(const dlistint_t *h)
 {
 	size_t d = 0;
 	const dlistint_t *current;
@@ -22,7 +21,6 @@ size_t print_dlistint(const dlistint_t *h)
 		while (current != NULL)
 		{
 			d++;
-			printf("%d\n", current->n);
 			current = current->next;
 		}
 	}
