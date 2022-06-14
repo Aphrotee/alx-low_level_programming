@@ -7,7 +7,7 @@
 #include <stddef.h>
 
 /**
- * main - entry point
+ * main - makes a copy of a file input
  * @ac: argument counter
  * @av: arguments array
  *
