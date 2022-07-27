@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * maun - entry point
+ * main - entry point
  *
  * Return: 0 Success
  */
