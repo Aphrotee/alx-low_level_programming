@@ -9,6 +9,7 @@
 int main(void)
 {
 	int a, b, c, d;
+	void *aa = NULL;
 
 	for (a = 0; a <= 9; a++)
 	{
@@ -35,7 +36,8 @@ int main(void)
 				{
 					for (d = 0; d <= 9; d++)
 					{
-						write(1, a + '0', 1);
+						*aa = a + '0';
+						write(1, &aa, 1);
 						write(1, b + '0', 1);
 						write(1, ' ', 1);
 						write(1, c + '0', 1);
