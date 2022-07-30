@@ -7,40 +7,30 @@
  */
 int main(void)
 {
-	int a, b, c, d;
+	int a = 1, i, j, n, m;
 
-	for (a = 0; a <= 9; a++)
+	for (i = 0; i < 10; i++)
 	{
-		for (b = 0; b <= 9; b++)
+		for (j = 0; j < 9; j++)
 		{
-			for (c = a; c <= 9; c++)
+			for (m = i; m < 10; m++)
 			{
-				if (c == a)
+				for (n = j + 1; n < 10; n++)
 				{
-	 				for (d = b + 1; d <=9; d++)
+					if (i == 0 && j == 0 && m == 0 && n == j + 1 && a)
 					{
-						putchar(a + '0');
-						putchar(b + '0');
-						putchar(' ');
-						putchar(c + '0');
-						putchar(d + '0');
-						if ((a == 9) & (b == 8))
-							break;
-						putchar(',');
-						putchar(' ');
+						a = 0;
+						n--;
 					}
-				}
-				else
-				{
-					for (d = 0; d <= 9; d++)
+					putchar(i + '0');
+					putchar(j + '0');
+					putchar(' ');
+					putchar(m + '0');
+					putchar(n + '0');
+					if (i == 9 && j == 8 && m == 9 && n == 9)
+						putchar('\n');
+					else
 					{
-						putchar(a + '0');
-						putchar(b + '0');
-						putchar(' ');
-						putchar(c + '0');
-						putchar(d + '0');
-						if ((a == 9) && (b == 8))
-							break;
 						putchar(',');
 						putchar(' ');
 					}
@@ -48,6 +38,5 @@ int main(void)
 			}
 		}
 	}
-	putchar('\n');
-return (0);
+	return (0);
 }
