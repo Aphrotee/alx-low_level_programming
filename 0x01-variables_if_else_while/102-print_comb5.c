@@ -1,54 +1,37 @@
 #include <stdio.h>
-#include <unistd.h>
 
-/**
- * main - entry point
- *
- * Return: 0 Success
- */
 int main(void)
 {
-	int a, b, c, d;
+	int i, j, n, m;
 
-	for (a = 0; a <= 9; a++)
+	for (i = 0; i < 10; i++)
 	{
-		for (b = 0; b <= 9; b++)
+		for (j = 0; j < 9; j++)
 		{
-			for (c = a; c <= 9; c++)
+			for (m = i; m < 10; m++)
 			{
-				if (c == a)
-				{
-	 				for (d = b + 1; d <=9; d++)
-					{
-						putchar(a + '0');
-						putchar(b + '0');
-						putchar(' ');
-						putchar(c + '0');
-						putchar(d + '0');
-						if ((a == 9) & (b == 8))
-							break;
-						putchar(',');
-						putchar(' ');
-					}
-				}
+				if (m == i)
+					n = j + 1;
 				else
+					n = 0;
+				while (n < 10)
 				{
-					for (d = 0; d <= 9; d++)
+					_putchar(i + '0');
+					_putchar(j + '0');
+					_putchar(' ');
+					_putchar(m + '0');
+					_putchar(n + '0');
+					if (i == 9 && j == 8 && m == 9 && n == 9)
+						_putchar('\n');
+					else
 					{
-						write(1, a + '0', 1);
-						write(1, b + '0', 1);
-						write(1, ' ', 1);
-						write(1, c + '0', 1);
-						write(1, d + '0', 1);
-						if ((a == 9) && (b == 8))
-							break;
-						write(1, ',', 1);
-						write(1, ' ', 1);
+						_putchar(',');
+						_putchar(' ');
 					}
+					n++;
 				}
 			}
 		}
 	}
-	putchar('\n');
-return (0);
+	return (0);
 }
