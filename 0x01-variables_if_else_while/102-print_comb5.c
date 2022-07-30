@@ -16,17 +16,17 @@ int main(void)
 					n = 0;
 				while (n < 10)
 				{
-					_putchar(i + '0');
-					_putchar(j + '0');
-					_putchar(' ');
-					_putchar(m + '0');
-					_putchar(n + '0');
+					putchar(i + '0');
+					putchar(j + '0');
+					putchar(' ');
+					putchar(m + '0');
+					putchar(n + '0');
 					if (i == 9 && j == 8 && m == 9 && n == 9)
-						_putchar('\n');
+						putchar('\n');
 					else
 					{
-						_putchar(',');
-						_putchar(' ');
+						putchar(',');
+						putchar(' ');
 					}
 					n++;
 				}
