@@ -13,6 +13,8 @@ char *str_concat(char *s1, char *s2)
 	char *d, *nstr = malloc(sizeof(s1) + sizeof(s2) - 4);
 
 	d = nstr;
+	if (!nstr)
+		return (NULL);
 	if (s1 == NULL)
 		s1 = "\0";
 	if (s2 == NULL)
