@@ -9,7 +9,7 @@
 int (*get_op_func(char *s))(int, int)
 {
 	op_t *ops = malloc(sizeof(op_t) * 6);
-	ops[6] = {
+	ops[] = {
 		{"+", op_add},
 		{"-", op_sub},
 		{"*", op_mul},
