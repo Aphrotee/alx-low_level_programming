@@ -1,16 +1,15 @@
 #include "3-calc.h"
 #include <stdlib.h>
+#include <stdio.h>
+
 /**
- * get_op_func - takes operation function as input and returns ans to operation
- * @s: arithemetic operator
- *
- * Return: answer to operation
+ * get_op_func - select the correct operation function asked by user
+ * @s: operator argument
+ * Return: function pointer corresponding to operator given
  */
 int (*get_op_func(char *s))(int, int)
 {
-	op_t *ops = malloc(sizeof(op_t) * 6);
-	int i;
-	ops[6] = {
+	op_t ops[] = {
 		{"+", op_add},
 		{"-", op_sub},
 		{"*", op_mul},
@@ -18,14 +17,14 @@ int (*get_op_func(char *s))(int, int)
 		{"%", op_mod},
 		{NULL, NULL}
 	};
+	int i;
 
-	for (i = 0; i < 5; i++)
+	i = 0;
+	while (i < 5)
 	{
-		if (ops[i].op == s)
-		{
-			break;
-		}
+		if (ops[i].op[0] == s[0])
+			return (ops[i].f);
+		i++;
 	}
-	free(ops);
-	return (ops[i].f);
+	return (NULL);
 }

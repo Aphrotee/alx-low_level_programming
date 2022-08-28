@@ -1,10 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
 
-
-#include  "main.h"
-#include <stdlib.h>
-
 /**
  * str_concat - concatenates two strings
  * @s1: first string input
@@ -34,28 +30,6 @@ char *str_concat(char *s1, char *s2)
 		*nstr = *s2;
 		nstr++;
 		s2++;
-	}
-	return (d);
-}
-
-/**
- * argstostr - concatenates the arguments of a program
- * @ac: number of arguments
- * @av: agruments
- *
- * Return: pointer
- */
-char *argstostr(int ac, char **av)
-{
-	char *d, *strr, *n = "\n";
-	int i;
-
-	strr = malloc((sizeof(char *) * ac * 2) + 4012);
-	d = strr;
-	for (i = 0; i < ac; i++)
-	{
-		strr = str_concat(strr, av[i]);
-		strr = str_concat(strr, n);
 	}
 	return (d);
 }
