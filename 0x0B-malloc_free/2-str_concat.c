@@ -2,38 +2,38 @@
 #include <stdlib.h>
 
 /**
- * str_concat - concatenate two strings using malloc
- * @s1: string 1
- * @s2: string 2
- * Return: pointer to concat string
+ * alloc_grid - create a 2d integer grid using malloc.
+ * Description: Each element of the grid should be initialized to 0.
+ * @width: int size width
+ * @height: int size height
+ * Return: Pointer to new grid
  */
 
-char *str_concat(char *s1, char *s2)
+int **alloc_grid(int width, int height)
 {
-	char *a;
-	int i, j, c, d;
+	int **grid;
+	int i, j;
 
-	if (s1 == NULL)
-		s1 = "";
-	if (s2 == NULL)
-		s2 = "";
-
-	for (i = 0; s1[i] != '\0'; i++)
-		;
-	for (j = 0; s2[j] != '\0'; j++)
-		;
-
-	a = malloc((i * sizeof(*s1)) + (j * sizeof(*s2)) + 1);
-	if (a == NULL)
+	if (width + height < 2 || width < 1 || height < 1)
 		return (NULL);
 
-	for (c = 0, d = 0; c < (i + j + 1); c++)
+	grid = malloc(height * sizeof(*grid));
+	if (grid == NULL)
+		return (NULL);
+
+	for (i = 0; i < height; i++)
 	{
-		if (c < i)
-			a[c] = s1[c];
-		else
-			a[c] = s2[d++];
+		grid[i] = malloc(width * sizeof(**grid));
+		if (grid[i] == NULL)
+		{
+			for (i--; i >= 0; i--)
+				free(grid[i]);
+			free(grid);
+			return (NULL);
+		}
+		for (j = 0; j < width; j++)
+			grid[i][j] = 0;
 	}
 
-	return (a);
+	return (grid);
 }
