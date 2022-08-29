@@ -1,35 +1,43 @@
 #include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
 
 /**
- * str_concat - concatenates two strings
- * @s1: first string input
- * @s2: second string input
+ * argstostr - This is a function that concatenates all
+ * the arguments of your program.
+ * @ac: argument counter
+ * @av: argument list
  *
  * Return: pointer to new string
  */
-char *str_concat(char *s1, char *s2)
+char *argstostr(int ac, char **av)
 {
-	char *d, *nstr = malloc(sizeof(s1) + sizeof(s2) - 4);
+	char *new, *d;
+	int i, j, tot = 0;
 
-	d = nstr;
-	if (nstr == NULL)
+	if (ac == 0 || !av)
 		return (NULL);
-	if (s1 == NULL)
-		s1 = "\0";
-	if (s2 == NULL)
-		s2 = "\0";
-	while (*s1 != '\0')
+	for (i = 0; i < ac; i++)
 	{
-		*nstr = *s1;
-		nstr++;
-		s1++;
+		for (j = 0; av[i][j] != '\0'; j++)
+			tot++;
+		tot++;
 	}
-	while (*s2 != '\0')
+	tot++;
+	new = malloc(sizeof(char) * tot);
+	if (!new)
+		return (NULL);
+	d = new;
+	for (i = 0; i < ac; i++)
 	{
-		*nstr = *s2;
-		nstr++;
-		s2++;
+		for (j = 0; av[i][j] != '\0'; j++)
+		{
+			*new = av[i][j];
+			new++;
+
+		}
+		*new = '\n';
+		new++;
 	}
 	return (d);
 }
