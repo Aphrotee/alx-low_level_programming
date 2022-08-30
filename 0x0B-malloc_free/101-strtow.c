@@ -25,7 +25,7 @@ void free_everything(char **string, int i)
 char **strtow(char *str)
 {
 	char *a, *x, *y, **arp, **d;
-	int i = 0, j, n;
+	int i = 0, j, n, m = 0;
 
 	if (!str || *str == '\0' || *(str + 1) == '\0')
 		return (NULL);
@@ -36,7 +36,10 @@ char **strtow(char *str)
 				(*(str + 1) == '\0' || *(str + 1) == ' '))
 			i++;
 		str++;
+		m++;
 	}
+	if (m == 1)
+		return (NULL);
 	str = a;
 	arp = (char **)malloc(sizeof(char *) * (i + 1));
 	if (!arp)
