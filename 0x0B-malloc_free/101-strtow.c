@@ -38,7 +38,7 @@ char **strtow(char *str)
 		str++;
 	}
 	str = a;
-	if (!(strcmp(" ", str)))
+	if (strcmp(" ", str))
 		return (NULL);
 	arp = (char **)malloc(sizeof(char *) * (i + 1));
 	if (!arp)
