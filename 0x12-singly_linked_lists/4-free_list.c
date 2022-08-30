@@ -14,6 +14,8 @@ void free_list(list_t *head)
 	list_t *tem = (list_t *)malloc(sizeof(list_t));
 
 	temp = head;
+	if (!head)
+		return;
 	while (temp->next != NULL)
 	{
 		tem = temp->next;
