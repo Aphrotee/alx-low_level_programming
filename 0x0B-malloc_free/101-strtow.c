@@ -27,7 +27,7 @@ char **strtow(char *str)
 	char *a, *x, *y, **arp, **d;
 	int i = 0, j, n;
 
-	if (!str)
+	if (!str || str == "" || str + 1 == '\0')
 		return (NULL);
 	a = str;
 	while (*str != '\0')
