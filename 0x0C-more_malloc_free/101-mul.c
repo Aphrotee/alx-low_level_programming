@@ -50,7 +50,6 @@ int main(int argc, char *argv[])
 {
 	int i;
 
-	malloc();
 	if (argc != 3)
 	{
 		printf("Error\n");
