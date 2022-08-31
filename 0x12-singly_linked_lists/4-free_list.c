@@ -10,8 +10,7 @@
  */
 void free_list(list_t *head)
 {
-	list_t *temp = (list_t *)malloc(sizeof(list_t));
-	list_t *tem = (list_t *)malloc(sizeof(list_t));
+	list_t *temp, *tem;
 
 	temp = head;
 	if (!head)
