@@ -15,10 +15,10 @@ void free_list(list_t *head)
 	temp = head;
 	if (!head)
 		return;
-	if (!(head->next))
+	if (!(temp->next))
 	{
-		free(head->str);
-		free(head);
+		free(temp->str);
+		free(temp);
 	}
 	while (temp->next)
 	{
