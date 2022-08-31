@@ -34,7 +34,7 @@ int iss_palindrome(char *s, int i)
 int is_palindrome(char *s)
 {
 	int i;
-	i = 0;
 
+	i = 0;
 	return (iss_palindrome(s, i));
 }
