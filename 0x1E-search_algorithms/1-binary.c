@@ -47,4 +47,5 @@ void print_array(int *array, int start, int stop)
 			printf("%d, ", array[i]);
 		printf("%d\n", array[i]);
 	}
+	return;
 }
