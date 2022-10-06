@@ -23,14 +23,14 @@ int jump_search(int *array, size_t size, int value)
 		{
 			if (array[a] <= value && array[a + sq] >= value)
 			{
-				printf("Value found between");
+				printf("Value found between ");
 				printf("indexes [%ld] and [%ld]\n", a, a + sq);
 				break;
 			}
 		}
 		else
 		{
-			printf("Value found between");
+			printf("Value found between ");
 			printf("indexes [%ld] and [%ld]\n", a, a + sq);
 		}
 	}
